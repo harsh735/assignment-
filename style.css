@@ -5,7 +5,7 @@ html, body {
   
 
   .btn {
-    margin-right: 0rem;
+  
     margin-left: 2rem;
     font-family: Helvetica;
     border-radius: 25px;
@@ -64,3 +64,86 @@ html, body {
     /* background: green; */
   }
 
+
+
+
+  @media screen and (max-width: 768px) {
+    .navbar-toggler {
+      margin-left: 300px;
+    }
+
+    .btn {
+      margin-left: 12%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar {
+      justify-content: left;
+    }
+
+    #startBtn, #stopBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #navbarNavDropdown {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100vh;
+      margin-top: 96px;
+      background-color: white;
+    }
+
+    .nav-item {
+      display: grid;
+      margin-left: 30px;
+    }
+
+    .inputBtn {
+      display: block;
+      width: 120px;
+      margin-bottom: 40px;
+      margin-left: 50px;
+    }
+
+    #colorButton {
+      width: 200px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      margin-left: 10px;
+    }
+
+    .wrapper {
+      display: grid;
+      height: 100%;
+    }
+  
+    .wrapper .left,
+    .wrapper .right  {
+      flex: 1;
+      display: grid;
+      grid-template-rows: auto auto;
+    }
+  
+    .wrapper .left div {
+      height: 50vh;
+    }
+    .wrapper .left div ~ div  {
+      display: none;
+      height: 0%;
+    }
+
+
+    .wrapper .right div  {
+      height: 0%;
+    }
+    .wrapper .right div ~ div {
+      height: 50vh;
+    }
+  }

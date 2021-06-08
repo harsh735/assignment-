@@ -1,78 +1,76 @@
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src ="index.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Myshowchat</title>
-    
-</head>
-<body>
-    
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>   
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+      <script src ="index.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <title>Myshowchat</title>
+      
+  </head>
+  <body>
+      
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button onclick="change()" id="startBtn"type="button" class="btn btn-success btn-lg">START</button>
+        <button onclick = "stopColor()" id="stopBtn" type="button" class="btn btn-danger btn-lg">STOP</button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-                <button onclick="change()" type="button" class="btn btn-success btn-lg">START</button>
-            </li>
-            <li class="nav-item">
-                <button onclick = "stopColor()" id="stopBtn" type="button" class="btn btn-danger btn-lg">STOP</button>
-            </li>
-            <li class="nav-item">
-                <input  type="button" id="colorButton" value="Click to change color" onclick="changeColor()">
-                <input class = "inputBtn" type="text" id="colorInputOne">
-                <input class = "inputBtn" type="text" id="colorInputTwo">
-                <input class = "inputBtn" type="text" id="colorInputThree">
-                <input class = "inputBtn" type="text" id="colorInputFour">
-                
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-        <div class="wrapper">
-            <div class="left">
-              <div id="leftTop">
-                  Left - Top
+  
+            <ul class="navbar-nav">          
+              <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
+              <li class="nav-item">
+                  <input  type="button" id="colorButton" value="Click to change color" onclick="changeColor()">
+                  <input class = "inputBtn" type="text" id="colorInputFour" value = "#FFDA18">
+                  <input class = "inputBtn" type="text" id="colorInputThree" value="#00C2FF">
+                  <input class = "inputBtn" type="text" id="colorInputTwo" value="#50A000">
+                  <input class = "inputBtn" type="text" id="colorInputOne" value = "#D00000">
+                  
+              </li>
+            </div>
+            </ul>
+        </nav>
+  
+          <div class="wrapper">
+              <div class="left">
+                <div id="leftTop">
+                    
+                </div>
+                <div id="leftBottom">
+                    
+                </div>
               </div>
-              <div id="leftBottom">
-                  Left - Bottom
+              <div class="right">
+                <div id="rightTop"> 
+                  
+                </div>
+                <div id="rightBottom">
+                 
+                </div>
               </div>
             </div>
-            <div class="right">
-              <div id="rightTop"> 
-                Right - Top
-              </div>
-              <div id="rightBottom">
-                Right - Bottom
-              </div>
-            </div>
-          </div>
-
-          <script>
-              function changeColor() {
-                  var colorOne = document.getElementById('colorInputOne').value;
-                  document.getElementById('leftTop').style.backgroundColor = colorOne;
-
-                  var colorTwo = document.getElementById('colorInputTwo').value;
-                  document.getElementById('leftBottom').style.backgroundColor = colorTwo;
-
-                  var colorThree = document.getElementById('colorInputThree').value;
-                  document.getElementById('rightTop').style.backgroundColor = colorThree;
-
-                  var colorFour = document.getElementById('colorInputFour').value;
-                  document.getElementById('rightBottom').style.backgroundColor = colorFour;
-              }
-            </script>
-
-
-</body>
-</html>
+  
+            <script>
+                function changeColor() {
+                    var colorOne = document.getElementById('colorInputOne').value;
+                    document.getElementById('leftTop').style.backgroundColor = colorOne;
+  
+                    var colorTwo = document.getElementById('colorInputTwo').value;
+                    document.getElementById('leftBottom').style.backgroundColor = colorTwo;
+  
+                    var colorThree = document.getElementById('colorInputThree').value;
+                    document.getElementById('rightTop').style.backgroundColor = colorThree;
+  
+                    var colorFour = document.getElementById('colorInputFour').value;
+                    document.getElementById('rightBottom').style.backgroundColor = colorFour;
+                }
+              </script>
+  
+  
+  </body>
+  </html>
