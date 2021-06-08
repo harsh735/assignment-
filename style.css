@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    height: 100%;
+  }
+  
+
+  .btn {
+    margin-right: 0rem;
+    margin-left: 2rem;
+    font-family: Helvetica;
+    border-radius: 25px;
+    font-size: 15px;
+  } 
+
+  .inputBtn {
+    width: 10%;
+    letter-spacing: 5%;
+    float: right;
+  }
+
+  #colorButton {
+    float: right;
+    width: 20%;
+    margin-left: 5%;
+  }
+  .btn-input {
+    width: 15%;
+    float: right;
+    background-color: rgb(8, 76, 139);
+  }
+ 
+
+  .wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+
+  .wrapper .left,
+  .wrapper .right  {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .wrapper .right div  {
+    flex: 25%;
+    /* background: cyan; */
+  }
+  .wrapper .right div ~ div  {
+    flex: 75%;
+    /* background: yellow; */
+  }
+
+
+
+  .wrapper .left div  {
+    flex: 75%;
+    /* background: red; */
+  }
+  .wrapper .left div ~ div  {
+    flex: 25%;
+    /* background: green; */
+  }
+
